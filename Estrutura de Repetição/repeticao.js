@@ -4,15 +4,13 @@ for(let i = 5; i > 0; i--){ // decrementando
     console.log(i); 
 }
 
-// o código acima imprime o valor da variável i e a decrementa até o valor de i ser igual 0 | output = 5 4 3 2 1 
 console.log("Exemplo com INCREMENTO da variável i"); 
  
 for(let i = 0; i < 5; i++){ // incrementando
     console.log(i); 
 }
-// O código acima imprime o valor da variável i e a incrementa até que o valor de i seja igual a 5 | output = 0 1 2 3 4
 
-console.log("Podemos usar o FOR para buscar valores em VETORES/ARRAYS"); 
+console.log("Podemos usar o FOR para buscar valores em VETORES/ARRAYS");
 
 let marcas = ["Asus","LG","Acer","Dell"];
 let t = marcas.length; // pega o tamanho do vetor, ou seja, a quantidade de valores, no caso 4
@@ -41,10 +39,6 @@ console.log("--- Estrutura de Repetição WHILE ---");
   console.log(cont+ '-' +modelos[cont]);
   cont++;
  }
-// output: 0-LG 1-Samsung ... 4-Acer 
-// obs: É pouco comum usar o While para percorrer Vetores como o exemplo acima
-
-// se a condição do While for sempre verdadeira, a execução do programa fica presa no While
 
 console.log("--- Estrutura de Repetição DO-WHILE ---"); 
 
@@ -61,7 +55,6 @@ let objeto = {1:"C", 2:"Python", 3:"C++", 4: "C#", 5:"PHP"};
    for(let prop in objeto) {
       console.log("Linguagem: "+ prop +" - "+objeto[prop]);
    } 
-   // output: linguagem: 1 - C linguagem: 2 - python ... linguagem: 5 - PHP 
 
 console.log("--- Percorrer Objetos ---"); 
   const pessoa = { 
