@@ -1,12 +1,12 @@
 console.log("Exemplo com DECREMENTO da variável i"); 
 
-for(let i = 9; i > 0; i--){ // decrementando
+for(let i = 10; i >= 1; i--){ // decrementando
     console.log(i); 
 }
 
 console.log("Exemplo com INCREMENTO da variável i"); 
- 
-for(let i = 0; i < 9; i++){ // incrementando
+
+for(let i = 0; i <=1 0; i++){ // incrementando
     console.log(i); 
 }
 
