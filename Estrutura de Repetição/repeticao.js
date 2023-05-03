@@ -1,22 +1,22 @@
 console.log("Exemplo com DECREMENTO da variável i"); 
 
-for(let i = 5; i > 0; i--){ // decrementando
+for(let i = 9; i > 0; i--){ // decrementando
     console.log(i); 
 }
 
 console.log("Exemplo com INCREMENTO da variável i"); 
  
-for(let i = 0; i < 5; i++){ // incrementando
+for(let i = 0; i < 9; i++){ // incrementando
     console.log(i); 
 }
 
-console.log("Podemos usar o FOR para buscar valores em VETORES/ARRAYS");
+console.log("FOR pode ser usado para buscar valores em VETORES/ARRAYS"); 
 
-let marcas = ["Asus","LG","Acer","Dell"];
-let t = marcas.length; // pega o tamanho do vetor, ou seja, a quantidade de valores, no caso 4
+let nomes = ["Daniele","João","Nicole","Matheus"];
+let t = nomes.length; // pega o tamanho do vetor, ou seja, a quantidade de valores, no caso 4
 
 for(let x = 0; x < t; x++ ) { // a variável t possui o tamanho do vetor, serve exatamente para que o FOR só para quando ele imprimir o último valor/elemento do vetor
-    console.log(marcas[x]);
+    console.log(nomes[x]);
 }
 
 console.log("--- Estrutura de Repetição WHILE ---"); 
@@ -27,9 +27,7 @@ console.log("--- Estrutura de Repetição WHILE ---");
    console.log();    // imprime o valor atual da variável de controle | valor impresso apenas para entendimento
    control++;    // operação de incremento
   }
- // output : 0 - js 1 - js ... 5 - js
- // obs: console.log(`${control} - js`); -> esta sintaxe se chama template string, é uma outra forma de juntar(concatenar) variável com string 
-
+ 
  // pegando valores de Vetores usando While
  let modelos = ["LG","Samsung","Microsoft","Apple","Acer"]; 
 
@@ -39,13 +37,13 @@ console.log("--- Estrutura de Repetição WHILE ---");
   console.log(cont+ '-' +modelos[cont]);
   cont++;
  }
+// se a condição do While for sempre verdadeira, a execução do programa fica presa no While
 
 console.log("--- Estrutura de Repetição DO-WHILE ---"); 
 
 do {
   console.log("Executado pelo menos uma vez"); 
 }while(false) 
-// output: executado pelo menos uma vez
 //a condição do while vai ser falsa sempre, mesmo assim a frase foi impressa uma vez
 
 console.log("--- Estrutura de Repetição FOR IN ---"); 
@@ -68,7 +66,6 @@ console.log("--- Percorrer Objetos ---");
    for(let atributo in pessoa){ // 
     	console.log(pessoa[atributo]);
     }
-// output: Maria 20 65 1.7
 
 console.log("--- For In para Interar Vetores ---"); 
 
@@ -76,7 +73,7 @@ let marcas2 = ["LG","Samsung","Microsoft","Apple","Acer"];
 
    for(let element in marcas2) {
       console.log("Index: "+element+" - "+marcas2[element]);
-   } // output: Index: 0 - LG Index: 1 - Samsung ... Index: 4 - Acer
+   }
 
 console.log("--- Estrutura de reptição For Of ---"); 
 
@@ -85,14 +82,12 @@ let cursos = ["Sistemas de Informação","Ciências da Computação","Análise d
 for(let curso of cursos){
     console.log("Faculdade: - "+ curso);
 }
-// output : Faculdade: - Ciências da Computação Faculdade: - Análise de Sistemas ... Faculdade: - Engenharia de Software 
 
 let valoresFixos = [10, 20, 30];
 
 for (const value of valoresFixos) {
   console.log(value); // valores da variável value não podem ser modificados  
 }
-// output: 10 20 30
 
 console.log("--- Usando FOR OF para Arrays de Objetos ---"); 
 
@@ -106,11 +101,9 @@ console.log("--- Usando FOR OF para Arrays de Objetos ---");
 
     for(let funcionario of infoPessoa){
     console.log(funcionario.nome+" - "+funcionario.idade+" - "+funcionario.altura);
-} // output : Robinson-18-1.8 William-28-1.6 ...  Maíra-32-1.4
+    }
 
 console.log("--- Estrutura de Repetição ForEach ---"); 
-
-// O método forEach() permite executar uma função para cada elemento presente em um array.
 
 let numeros = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]; // Vetor
 
@@ -119,7 +112,6 @@ function tabuadaDe2(item) {  // esta função será executada para cada elemento
 }
 
 numeros.forEach(tabuadaDe2);
-//  output : 0 2 4 6 8 .... 20, ou seja, a tabuade de 2
 
 let valores = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 var total = 0;
@@ -130,13 +122,10 @@ function somar(item, indice) {
 }
 
 
-numeros.forEach(somar); // output: posição:0 - soma = 0 posição:1 - soma = 1  posição:2 - Soma = 3 ... posição:10 - soma = 55
-
-// podemos usar forEach para percorrer Arrays
+numeros.forEach(somar);
 
 let modelPhones = ["A31","MotoOne","A51","A72","Redmi"]; 
 
 modelPhones.forEach(function(item,indice){ 
    console.log(indice+" = "+ item); // para cada item do vetor, imprime o índice e valor dessa posição 
 }); 
-// output : 0 = A31 1 = MotoOne ... 4 = Redmi 
